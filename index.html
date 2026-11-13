@@ -1,361 +1,345 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dusk">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Synthetic Reading: Myth and Politics in The Great Indian Novel</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&family=Rozha+One&display=swap"><style>
-:root{--bg:#eef0f2;--bg2:#d6deea;--panel:#fff;--ink:#1a1f2b;--mute:#566070;--line:#c9d0d8;--accent:#234b9b;--accent-ink:#fff;--mark:#ffe08a;
---serif:"Newsreader",Georgia,"Iowan Old Style",serif;--sans:"Instrument Sans","Avenir Next","Segoe UI",system-ui,sans-serif;--disp:"Rozha One","Playfair Display",Georgia,serif;--sy:20%;--rot:0deg}
-:root[data-theme=epic]{--bg:#12132e;--bg2:#2c2766;--panel:#1b1c3d;--ink:#ece7da;--mute:#aeacc8;--line:#3a3a70;--accent:#f0b429;--accent-ink:#1a1400;--mark:#5b4510;color-scheme:dark}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101330;--bg2:#1c2150;--fg:#ece8dc;--mut:#a9a8c4;--gold:#e9b44c;--card:#1a1e48;--line:#34397a;--ink:#101330}
+[data-theme=khadi]{--bg:#e9ecf1;--bg2:#d8dde8;--fg:#1b1d3a;--mut:#53557a;--gold:#8a5a00;--card:#fff;--line:#b9bfd3;--ink:#fff}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:radial-gradient(70rem 45rem at 88% var(--sy),var(--bg2),transparent 70%) fixed,var(--bg);color:var(--ink);font:18px/1.7 var(--serif);transition:color .4s}
-a{color:var(--accent)}
-a:focus-visible,.btn:focus-visible,.fc:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.chakra{position:fixed;right:-14vmin;bottom:-14vmin;width:60vmin;height:60vmin;color:var(--accent);opacity:.09;transform:rotate(var(--rot));pointer-events:none;z-index:0}
-.rp{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(0);z-index:20}
-.layout{position:relative;z-index:1;display:grid;grid-template-columns:230px minmax(0,1fr);gap:2.5rem;max-width:1100px;margin:0 auto;padding:0 1.2rem}
-@media(max-width:820px){.layout{grid-template-columns:1fr;gap:0}}
-nav{position:sticky;top:0;align-self:start;padding:2rem 0;font:14px/1.4 var(--sans)}
-@media(max-width:820px){nav{position:static;padding:1rem 0;border-bottom:1px solid var(--line)}nav ol{display:flex;flex-wrap:wrap;gap:.3rem .9rem}}
-nav p{margin:0 0 .6rem;font-weight:600}
-nav ol{list-style:none;margin:0;padding:0}
-nav li{margin:.35rem 0}
-nav a{text-decoration:none;color:var(--mute);display:inline-block;padding-left:.7rem;margin-left:-.7rem;border-left:2px solid transparent;transition:color .2s,border-color .2s}
-nav a:hover{color:var(--accent)}
-nav a.on{color:var(--accent);border-left-color:var(--accent);font-weight:600}
-.tools{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.2rem}
-.btn{font:600 13px var(--sans);padding:.45rem .85rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;cursor:pointer}
-.btn:hover{border-color:var(--accent)}
-.btn.pri{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-header{padding:3rem 0 1.5rem}
-h1{font:400 clamp(2.1rem,5.4vw,3.7rem)/1.08 var(--disp);margin:0 0 1rem;letter-spacing:-.01em}
-h1 em{font:italic 400 .92em var(--serif)}
-.sub{font:15px/1.5 var(--sans);color:var(--mute);margin:.2rem 0}
-.byline{margin-top:1rem;font:15px/1.5 var(--sans)}
-section{padding:1.8rem 0;border-top:1px solid var(--line)}
-h2{font:400 clamp(1.6rem,3.2vw,2.15rem)/1.2 var(--disp);margin:0 0 .8rem}
-h3{font:600 1.05rem var(--sans);margin:1.4rem 0 .4rem}
-p{margin:.6rem 0;max-width:68ch}
-ul,ol.body{max-width:68ch;padding-left:1.3rem}
-li{margin:.35rem 0}
-.abstract{background:var(--panel);border-left:5px solid var(--accent);padding:1rem 1.3rem;border-radius:0 8px 8px 0}
-.abstract p{max-width:none}
-mark{background:var(--mark);color:inherit;padding:0 3px}
-.wrap{overflow-x:auto;margin:1rem 0}
-table{border-collapse:collapse;min-width:100%;font:15px/1.5 var(--sans);background:var(--panel)}
-caption{text-align:left;font-weight:600;padding:.4rem 0}
-th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
-th{background:var(--bg)}
-tbody tr:hover td{background:var(--bg2)}
-.note{font:14px/1.5 var(--sans);color:var(--mute)}
-.check{background:var(--panel);border:1px dashed var(--accent);padding:.7rem 1rem;border-radius:8px;font:15px/1.5 var(--sans);max-width:68ch}
-.refs{padding-left:0}
-.refs li{padding-left:1.5rem;text-indent:-1.5rem;list-style:none;margin:.6rem 0;max-width:72ch}
-footer{padding:2rem 0 3rem;border-top:1px solid var(--line);font:14px var(--sans);color:var(--mute)}
-.wrap.t1{display:none}
-.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:.9rem;margin:1rem 0;perspective:900px}
-.fc{all:unset;box-sizing:border-box;display:block;height:155px;cursor:pointer;position:relative;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-.fc:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.fc[aria-pressed=true]{transform:rotateY(180deg)}
-.fc>span{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;justify-content:space-between;font-family:var(--sans)}
-.fc .f{background:var(--panel);border:1px solid var(--line)}
-.fc .b{background:var(--accent);color:var(--accent-ink);transform:rotateY(180deg)}
-.fc b{font:400 1.4rem/1.15 var(--disp)}
-.fc small{font-size:.78rem;line-height:1.35;opacity:.85}
-#stage{position:fixed;inset:0;z-index:50;background:radial-gradient(70rem 45rem at 85% 10%,var(--bg2),transparent 70%),var(--bg);display:none;flex-direction:column}
-#stage.open{display:flex}
-.pbar{height:4px;background:var(--line)}
-.pbar i{display:block;height:100%;width:0;background:var(--accent);transition:width .4s}
-.slide{flex:1;overflow:auto;padding:clamp(1.2rem,5vw,3.5rem) clamp(1.2rem,8vw,7rem);font-size:clamp(18px,2.1vw,26px);outline:0}
-.slide>div{max-width:1100px;margin:0 auto}
-.slide section,.slide header{border:0;padding:0}
-.slide h1{font-size:clamp(2.4rem,6vw,4.6rem)}
-.slide h2{font-size:clamp(2rem,4.6vw,3.6rem);margin-bottom:1.2rem}
-.slide p,.slide ul,.slide ol{max-width:none}
-.slide table{font-size:.7em}
-.slide .deck{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
-.frag{opacity:0;transform:translateY(10px);transition:opacity .45s,transform .45s}
-.frag.on{opacity:1;transform:none}
-.ctl{display:flex;gap:.6rem;align-items:center;justify-content:center;padding:.8rem;font:13px var(--sans);color:var(--mute);flex-wrap:wrap}
-@media(max-width:600px){.ctl .hint{display:none}}
-@media (prefers-reduced-motion:reduce){.fc,.frag,.pbar i{transition:none}}
-@media print{nav,.chakra,.rp,#stage{display:none!important}.layout{display:block}body{background:#fff;color:#000}.deck{display:none}.wrap.t1{display:block}}
+html,body{height:100%;margin:0;overflow:hidden}
+body{color:var(--fg);font:clamp(1rem,1.7vw,1.3rem)/1.55 Newsreader,Georgia,serif;background:radial-gradient(120% 80% at 80% -10%,var(--bg2),var(--bg) 60%) fixed;transition:background .4s,color .4s}
+#chakra{position:fixed;right:-20vmax;top:50%;margin-top:-30vmax;width:60vmax;height:60vmax;color:var(--gold);opacity:.1;pointer-events:none;transition:transform 1s}
+#chakra svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:.6}
+#bar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,#f28c38 0 33%,#fff 33% 66%,#3fa66b 66%);z-index:9;transition:width .4s}
+.slide{position:absolute;inset:0;padding:3rem 6vw 5rem;overflow-y:auto;opacity:0;visibility:hidden;transform:translateX(2.5rem);transition:opacity .45s,transform .45s,visibility .45s}
+.slide.on{opacity:1;visibility:visible;transform:none}
+.w{max-width:62rem;margin:0 auto;min-height:100%;display:flex;flex-direction:column;justify-content:center}
+a{color:var(--gold)}
+h1,h2,h3,.dev{font-family:"Tiro Devanagari Hindi",Newsreader,Georgia,serif;font-weight:400}
+.dev{font-size:clamp(4rem,16vw,9rem);line-height:1;color:var(--gold)}
+h1{font-size:clamp(1.8rem,4.6vw,3.2rem);line-height:1.15;margin:.5rem 0 1rem}
+h2{font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1.15;margin:0 0 1rem;padding-bottom:.4rem;border-bottom:1px solid var(--line)}
+h3{font-size:1.1em;margin:.8rem 0 .3rem;color:var(--gold)}
+p{margin:.4rem 0}
+ul,ol{margin:.3rem 0;padding-left:1.3rem}
+li{margin:.3rem 0}
+li::marker{color:var(--gold)}
+.mut{color:var(--mut);font-size:.85em}
+mark{background:none;color:var(--gold);border-bottom:2px solid var(--gold)}
+.big{font-size:1.25em;margin:.5rem 0 1rem}
+.box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:6px;padding:.6rem 1rem;margin:.8rem 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.two>div{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.3rem 1rem}
+.g5{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.7rem;padding:0;list-style:none}
+.g5 li{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.5rem .9rem;margin:0}
+.cols{columns:2;column-gap:2rem;font-size:.8em}
+.cols li{break-inside:avoid}
+@media(max-width:700px){.two{grid-template-columns:1fr}.cols{columns:1}}
+.ctl{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.5rem 0}
+button{font:inherit;font-size:.8em;color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:99px;padding:.15rem .9rem;cursor:pointer}
+button[aria-pressed=true]{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.pn{display:none}.pn.on{display:block}
+#cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(11rem,1fr));gap:.7rem;margin:.6rem 0}
+.card{perspective:700px;height:7.5rem;background:none;border:0;padding:0;border-radius:0;text-align:left;font-size:1rem}
+.card[hidden]{display:none}
+.in{position:relative;display:block;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.card.flip .in{transform:rotateY(180deg)}
+.f,.k{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:.25rem;padding:.6rem .9rem;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:6px;backface-visibility:hidden}
+.k{transform:rotateY(180deg)}
+.y .f,.y .k{border-left-color:var(--gold)}
+.p .f,.p .k{border-left-color:var(--mut)}
+.card b{font-family:"Tiro Devanagari Hindi",Georgia,serif;font-weight:400;font-size:1.1rem;line-height:1.2;color:var(--fg)}
+.card i{color:var(--mut);font-size:.8rem;line-height:1.3}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.85em;background:var(--card)}
+th,td{border:1px solid var(--line);padding:.4rem .7rem;text-align:left;vertical-align:top}
+th{color:var(--gold);font-weight:600}
+.seg{display:flex;gap:4px;margin:.6rem 0 .2rem}
+.seg span{flex:1;height:.9rem;border-radius:3px;background:var(--line)}
+.seg span.on{background:var(--gold)}
+#ctrl{position:fixed;bottom:.8rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:.3rem .6rem;z-index:10}
+#ct{min-width:4.5rem;text-align:center;color:var(--mut);font-size:.85rem}
+#menu{position:fixed;left:50%;bottom:3.6rem;transform:translateX(-50%);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.4rem;z-index:10;max-height:60vh;overflow-y:auto;display:none;min-width:14rem}
+#menu.on{display:block}
+#menu button{display:block;width:100%;text-align:left;border:0;border-radius:4px}
+#menu button[aria-current=true]{color:var(--gold)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-<div class="layout">
-<nav aria-label="Sections">
-  <div class="tools"><button class="btn pri" id="present" type="button">Present</button><button class="btn" id="theme" type="button" aria-pressed="false">Switch to Epic view</button></div>
-  <p>Contents</p>
-  <ol>
-    <li><a href="#abstract">Abstract</a></li>
-    <li><a href="#objective">1. Objective</a></li>
-    <li><a href="#question">2. Research question</a></li>
-    <li><a href="#method">3. Methodology</a></li>
-    <li><a href="#list">4. List</a></li>
-    <li><a href="#analysis">5. Analysis</a></li>
-    <li><a href="#discussion">6. Discussion</a></li>
-    <li><a href="#limitation">7. Limitation</a></li>
-    <li><a href="#future">8. Future work</a></li>
-    <li><a href="#references">9. References</a></li>
-    <li><a href="#about">10. About</a></li>
-  </ol>
-</nav>
+<div id="bar"></div>
+<div id="chakra" aria-hidden="true"></div>
 
-<main>
-<header>
-  <h1>Myth and politics in <em>The Great Indian Novel</em>: a synthetic reading</h1>
-  <p class="sub">Reading of: Atulkumar Parmar, “Intertwining Myth and Politics: Shashi Tharoor’s <em>The Great Indian Novel</em>.” <em>Sahityasetu</em>, Year 10, Issue 3 (Continuous Issue 57), May–June 2020. ISSN 2249-2372.</p>
-  <p class="byline"><strong>Vijaylaxmi Yadav</strong> · Master’s in Digital Humanities and Social Sciences · Course: Digital Lab</p>
-</header>
+<section class="slide on" data-title="Title"><div class="w">
+<div class="dev" aria-hidden="true">महाभारत</div>
+<h1>Myth and politics in <em>The Great Indian Novel</em>: a synthetic reading</h1>
+<p class="mut">Reading of: Atulkumar Parmar, “Intertwining Myth and Politics: Shashi Tharoor’s <em>The Great Indian Novel</em>.” <em>Sahityasetu</em>, Year 10, Issue 3 (Continuous Issue 57), May–June 2020. ISSN 2249-2372.</p>
+<p><strong>Vijaylaxmi Yadav</strong> · Master’s in Digital Humanities and Social Sciences · Course: Digital Lab</p>
+<p class="mut">Use the arrow keys, swipe, or the buttons below. Press F for full screen.</p>
+</div></section>
 
-<section id="abstract" aria-labelledby="t-abs">
-  <h2 id="t-abs">Abstract</h2>
-  <div class="abstract">
-    <p>Parmar argues that Shashi Tharoor’s <em>The Great Indian Novel</em> (1989) is a political novel that retells the <em>Mahabharata</em> as the history of modern India, from Gandhi’s rise to Indira Gandhi’s return to power. The article places the novel in the tradition of Gandhian Indian fiction in English, then reads two figures closely: Gangaji (Gandhi, mapped on Bhishma) and Dhritarashtra (Nehru). It finds that the novel honours Gandhi’s truth and non-violence but faults his handling of partition and succession, and that it treats Nehru as a well-meaning democrat whose policies and priorities were misjudged. The article concludes that fusing epic and history lets a postcolonial writer recover cultural heritage and invite readers to question inherited myths. This synthetic reading restates that argument, lists its building blocks, and marks where it is strong and where it needs more support.</p>
-  </div>
-</section>
+<section class="slide" data-title="Abstract" id="abstract"><div class="w">
+<h2>Abstract</h2>
+<ul>
+<li>Parmar argues that Shashi Tharoor’s <em>The Great Indian Novel</em> (1989) is a political novel that retells the <em>Mahabharata</em> as the history of modern India, from Gandhi’s rise to Indira Gandhi’s return to power.</li>
+<li>The article places the novel in the tradition of Gandhian Indian fiction in English, then reads two figures closely: Gangaji (Gandhi, mapped on Bhishma) and Dhritarashtra (Nehru).</li>
+<li>It finds that the novel honours Gandhi’s truth and non-violence but faults his handling of partition and succession, and that it treats Nehru as a well-meaning democrat whose policies and priorities were misjudged.</li>
+<li>It concludes that fusing epic and history lets a postcolonial writer recover cultural heritage and invite readers to question inherited myths.</li>
+<li>This synthetic reading restates that argument, lists its building blocks, and marks where it is strong and where it needs more support.</li>
+</ul>
+</div></section>
 
-<section id="objective" aria-labelledby="t-obj">
-  <h2 id="t-obj">1. Objective</h2>
-  <p>This reading has three aims:</p>
-  <ul>
-    <li>To reconstruct Parmar’s argument about how <em>The Great Indian Novel</em> joins myth and politics.</li>
-    <li>To collect the article’s characters, critics and comparison texts in one place so they can be reused.</li>
-    <li>To assess the article critically and suggest how digital methods from Digital Lab could extend it.</li>
-  </ul>
-  <p>Parmar’s own purpose is to show how Tharoor uses the epic to comment on India’s present polity and to make readers question the mythic past they have inherited.</p>
-</section>
+<section class="slide" data-title="1. Objective" id="objective"><div class="w">
+<h2>1. Objective</h2>
+<p>This reading has three aims:</p>
+<ul>
+<li>To reconstruct Parmar’s argument about how <em>The Great Indian Novel</em> joins myth and politics.</li>
+<li>To collect the article’s characters, critics and comparison texts in one place so they can be reused.</li>
+<li>To assess the article critically and suggest how digital methods from Digital Lab could extend it.</li>
+</ul>
+<div class="box">Parmar’s own purpose is to show how Tharoor uses the epic to comment on India’s present polity and to make readers question the mythic past they have inherited.</div>
+</div></section>
 
-<section id="question" aria-labelledby="t-rq">
-  <h2 id="t-rq">2. Research question</h2>
-  <p>The article does not state a question, so these are inferred from its argument.</p>
-  <p><mark>Main question:</mark> How does Tharoor’s <em>The Great Indian Novel</em> use the <em>Mahabharata</em> to represent and judge the political history of modern India?</p>
-  <ul>
-    <li>How is Gandhi portrayed through Bhishma (Gangaji), and where does the novel praise or criticise him?</li>
-    <li>How is Nehru portrayed through Dhritarashtra, and on what grounds is he judged?</li>
-    <li>What does merging epic and history do for the genre of the political novel, and for the reader’s view of the past?</li>
-  </ul>
-</section>
+<section class="slide" data-title="2. Research question" id="question"><div class="w">
+<h2>2. Research question</h2>
+<p class="mut">The article does not state a question, so these are inferred from its argument.</p>
+<p class="big"><mark>Main question:</mark> How does Tharoor’s <em>The Great Indian Novel</em> use the <em>Mahabharata</em> to represent and judge the political history of modern India?</p>
+<ul>
+<li>How is Gandhi portrayed through Bhishma (Gangaji), and where does the novel praise or criticise him?</li>
+<li>How is Nehru portrayed through Dhritarashtra, and on what grounds is he judged?</li>
+<li>What does merging epic and history do for the genre of the political novel, and for the reader’s view of the past?</li>
+</ul>
+</div></section>
 
-<section id="method" aria-labelledby="t-m">
-  <h2 id="t-m">3. Methodology</h2>
-  <p>The article names no method, so this is a description of what it does.</p>
-  <ul>
-    <li><strong>Genre framing.</strong> Defines the political novel through Irving Howe and Gordon Milne, then traces the Indian political novel in English to Gandhian nationalism.</li>
-    <li><strong>Close thematic reading.</strong> Follows two character pairs through the novel, supported by quotations with page numbers.</li>
-    <li><strong>Theoretical lenses.</strong> Uses T. S. Eliot’s idea of time (<em>Four Quartets</em>) for the past-in-present, Meenakshi Mukherjee on epic myth in Indian fiction, Chinua Achebe on the writer’s role in a new nation, and M. F. Salat on retelling and meaning.</li>
-    <li><strong>Historical mapping.</strong> Matches mythic figures to historical ones (see the list below).</li>
-  </ul>
-  <p>The method of this reading: summarise each argumentative move, tabulate the evidence, then check claims against the text of the article itself.</p>
-</section>
+<section class="slide" data-title="3. Methodology" id="method"><div class="w">
+<h2>3. Methodology</h2>
+<p class="mut">The article names no method, so this is a description of what it does.</p>
+<ul>
+<li><strong>Genre framing.</strong> Defines the political novel through Irving Howe and Gordon Milne, then traces the Indian political novel in English to Gandhian nationalism.</li>
+<li><strong>Close thematic reading.</strong> Follows two character pairs through the novel, supported by quotations with page numbers.</li>
+<li><strong>Theoretical lenses.</strong> Uses T. S. Eliot’s idea of time (<em>Four Quartets</em>) for the past-in-present, Meenakshi Mukherjee on epic myth in Indian fiction, Chinua Achebe on the writer’s role in a new nation, and M. F. Salat on retelling and meaning.</li>
+<li><strong>Historical mapping.</strong> Matches mythic figures to historical ones (see the list).</li>
+</ul>
+<div class="box">The method of this reading: summarise each argumentative move, tabulate the evidence, then check claims against the text of the article itself.</div>
+</div></section>
 
-<section id="list" aria-labelledby="t-l">
-  <h2 id="t-l">4. List</h2>
-  <div class="wrap">
-    <table>
-      <caption>Table 1. Mythic and historical figures named in the article</caption>
-      <thead><tr><th>Figure in the novel</th><th>Mahabharata source</th><th>Historical counterpart</th><th>Treated closely?</th></tr></thead>
-      <tbody>
-        <tr><td>Gangaji</td><td>Bhishma (Ganga Datta)</td><td>Mahatma Gandhi</td><td>Yes</td></tr>
-        <tr><td>Dhritarashtra</td><td>Blind king of Hastinapur</td><td>Jawaharlal Nehru</td><td>Yes</td></tr>
-        <tr><td>Pandu</td><td>Dhritarashtra’s brother</td><td>Subhas Chandra Bose</td><td>Only as Gangaji’s sidelined favourite</td></tr>
-        <tr><td>Vidur</td><td>Counsellor</td><td>Sardar Patel</td><td>No</td></tr>
-        <tr><td>Karna</td><td>Epic warrior</td><td>Muhammad Ali Jinnah</td><td>No</td></tr>
-        <tr><td>Shikhandin</td><td>Bhishma’s eventual slayer</td><td>Nathuram Godse</td><td>As Gandhi’s assassin</td></tr>
-        <tr><td>Priya Duryodhani</td><td>Duryodhana</td><td>Indira Gandhi</td><td>Only in the novel’s time span</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="wrap">
-    <table>
-      <caption>Table 2. Gandhian Indian novels in English cited by the article</caption>
-      <thead><tr><th>Author</th><th>Works named</th><th>Gandhian element, per the article</th></tr></thead>
-      <tbody>
-        <tr><td>Kamala Markandaya</td><td><em>Nectar in a Sieve</em>; <em>A Handful of Rice</em></td><td>Concern for the lowly and the lost</td></tr>
-        <tr><td>Nayantara Sahgal</td><td><em>A Time to Be Happy</em></td><td>Gandhian values throughout</td></tr>
-        <tr><td>Manohar Malgonkar</td><td><em>A Bend in the Ganges</em></td><td>Hindu–Muslim unity</td></tr>
-        <tr><td>Chaman Nahal</td><td><em>Azadi</em>; <em>The Crown and the Loincloth</em></td><td>Communal harmony; Gandhi’s life 1915–1922</td></tr>
-        <tr><td>Mulk Raj Anand</td><td><em>The Sword and the Sickle</em>; <em>Untouchable</em></td><td>Gandhi appears as a character</td></tr>
-        <tr><td>R. K. Narayan</td><td><em>Waiting for the Mahatma</em></td><td>The freedom movement under Gandhi</td></tr>
-        <tr><td>K. A. Abbas; K. S. Venkataramani</td><td><em>Inquilab</em>; <em>Kandan the Patriot</em></td><td>The first phase of the freedom movement</td></tr>
-      </tbody>
-    </table>
-    <p class="note">Titles and author spellings are standardised from the article’s versions, which contain small typographical slips.</p>
-  </div>
-  <h3>Critical and theoretical sources the article draws on</h3>
-  <ul>
-    <li>Irving Howe and Gordon Milne: definitions of the political novel.</li>
-    <li>Stephen Spender: the writer cannot avoid the political nature of the age.</li>
-    <li>T. S. Eliot: time present and time past (<em>Four Quartets</em>).</li>
-    <li>Meenakshi Mukherjee: epics as shared background in Indian fiction.</li>
-    <li>Chinua Achebe: the writer’s role in a new nation.</li>
-    <li>M. F. Salat: history’s open-endedness and the retelling of the past.</li>
-  </ul>
-</section>
-
-<section id="analysis" aria-labelledby="t-a">
-  <h2 id="t-a">5. Analysis</h2>
-  <h3>The argumentative path</h3>
-  <ol class="body">
-    <li><strong>Writers cannot avoid politics.</strong> This produces the political novel, defined by dominant ideas or a political setting.</li>
-    <li><strong>Indian political fiction grew from Gandhian nationalism</strong>, with a long list of novels shaped by Gandhi’s ideals.</li>
-    <li><strong>Tharoor joins epic and history.</strong> Eliot’s time lets past and present coexist, and the result blurs genre, which the article calls a postmodern trait.</li>
-    <li><strong>Gandhi.</strong> Praised for truth, non-violence, fasting and mass mobilisation; criticised for using Hindu symbols that alienated Jinnah and for loosening his hold on Congress at partition.</li>
-    <li><strong>Nehru.</strong> Credited as a democrat without villainy, but criticised for Kashmir, for heavy industry and elite higher education over basic needs, and for foreign recognition over domestic need.</li>
-    <li><strong>Conclusion.</strong> Merging myth and history recovers heritage and pride, in line with Achebe and Salat.</li>
-  </ol>
-  <h3>Strengths</h3>
-  <ul>
-    <li>Clear scaffold from genre definition, to national tradition, to a single novel.</li>
-    <li>Quotations with page numbers (for example, Gangaji on truth, p. 48) ground the claims.</li>
-    <li>The Bhishma–Gandhi parallel (both committed to truth, both unable to prevent bloodshed) is a sharp, well-evidenced observation.</li>
-    <li>The article is balanced on Gandhi: it records both reverence and critique.</li>
-  </ul>
-  <h3>Weaker points</h3>
-  <ul>
-    <li>The first third surveys other Gandhian novels, but they are not used again when Tharoor is discussed, so the link to the main argument stays thin.</li>
-    <li>The claim that the novel makes readers question the mythic past is asserted rather than shown through reader response or textual technique.</li>
-    <li>Tharoor’s attitude is sometimes merged with the narrator’s and the characters’ (for example, Godse’s attack on Gandhi), and the difference is not discussed.</li>
-  </ul>
-</section>
-
-<section id="discussion" aria-labelledby="t-d">
-  <h2 id="t-d">6. Discussion</h2>
-  <p>The central idea is that retelling the epic is a way of reading nationalist history. Putting Gandhi in the place of Bhishma gives him mythic stature and, at the same moment, a tragic flaw: the elder who holds power from behind the throne and cannot stop the coming war. Nehru as Dhritarashtra carries a related charge, that of a ruler whose blindness is a failure of vision.</p>
-  <p>This connects to the wider point that myth is a shared language in Indian writing, so using it makes the political critique legible to a broad readership. It also connects to postcolonial recovery: for Achebe and Salat, rewriting the past is a form of self-respect rather than nostalgia.</p>
-  <p>The article’s reading of Tharoor’s critique is also a reminder that satire is not neutral. The novel’s judgments on Nehru and Gandhi are Tharoor’s, and the article largely reports them rather than testing them against historians.</p>
-  <div class="check">
-    <strong>Check before you cite.</strong> The article says the novel ends with Indira Gandhi’s re-election in 1982. Her return to power after the Janata government is usually dated to 1980, so verify this against the novel before repeating it. The article also gives Milne’s book as 1966 in the text and 1972 in the works cited.
-  </div>
-</section>
-
-<section id="limitation" aria-labelledby="t-lim">
-  <h2 id="t-lim">7. Limitation</h2>
-  <p>Of the article:</p>
-  <ul>
-    <li>It examines only Gandhi and Nehru, and the author says so. Vidur/Patel, Karna/Jinnah, Pandu/Bose and Priya Duryodhani/Indira Gandhi are named but not analysed.</li>
-    <li>It has no stated methodology and little engagement with existing criticism of the novel beyond Salat.</li>
-    <li>It leans on one primary text and on quotation, with little attention to narrative form, humour or irony, which are central to Tharoor’s style.</li>
-    <li>Reference details are inconsistent (the Milne date, stray note numbers in the first paragraph).</li>
-  </ul>
-  <p>Of this reading:</p>
-  <ul>
-    <li>It is based on one article, not on the novel itself, so claims about Tharoor’s text are second-hand.</li>
-    <li>The research questions and methodology sections are inferred, since the article does not state them.</li>
-  </ul>
-</section>
-
-<section id="future" aria-labelledby="t-f">
-  <h2 id="t-f">8. Future work</h2>
-  <ul>
-    <li><strong>Complete the mapping.</strong> Extend the close reading to the remaining character pairs and to the Partition and Emergency sections.</li>
-    <li><strong>Digital Lab methods.</strong> Build a character network from the novel’s text, compare how often epic names and historical names appear, or use topic modelling to find which political themes cluster with which epic episodes.</li>
-    <li><strong>Digital annotation.</strong> Tag the quotations used by Parmar in a shared annotation tool and add a layer for the original <em>Mahabharata</em> episodes.</li>
-    <li><strong>Comparison.</strong> Set Tharoor beside other myth-and-history retellings in Indian writing to test the claim of blurred genre.</li>
-    <li><strong>Reception.</strong> Collect reviews and reader responses to see whether readers do question inherited myths, as the article claims.</li>
-  </ul>
-</section>
-
-<section id="references" aria-labelledby="t-r">
-  <h2 id="t-r">9. References</h2>
-  <p class="note">The first entry is the article read here. The rest are the works it cites, as listed in its own bibliography, and should be checked against the originals before being cited again.</p>
-  <ul class="refs">
-    <li>Parmar, Atulkumar. 2020. “Intertwining Myth and Politics: Shashi Tharoor’s <em>The Great Indian Novel</em>.” <em>Sahityasetu</em> 10 (3), Continuous Issue 57, May–June. ISSN 2249-2372. <a href="http://www.sahityasetu.co.in/issue57/atul.html">sahityasetu.co.in/issue57/atul.html</a></li>
-    <li>Achebe, Chinua. 1964. “The Role of the Writer in a New Nation.” <em>Nigerian Magazine</em> 81: 157–60.</li>
-    <li>Eliot, T. S. <em>Four Quartets</em>.</li>
-    <li>Howe, Irving. 1957. <em>Politics and the Novel</em>. New York: Horizon Press.</li>
-    <li>Milne, Gordon. <em>The American Political Novel</em>. Norman: University of Oklahoma Press. (Dated 1972 in the article’s bibliography and 1966 in its text.)</li>
-    <li>Mukherjee, Meenakshi. 1971. <em>The Twice Born Fiction</em>. New Delhi: Heinemann.</li>
-    <li>Salat, M. F. 1993. “Making the Past Present: Shashi Tharoor’s <em>The Great Indian Novel</em>.” In <em>Contemporary Indian Fiction in English</em>, ed. Avadhesh K. Singh. New Delhi: Creative Books.</li>
-    <li>Spender, Stephen. 1966. <em>World Within World: The Autobiography of Stephen Spender</em>. Los Angeles: University of California Press.</li>
-    <li>Tharoor, Shashi. 1989. <em>The Great Indian Novel</em>. New Delhi: Penguin Books.</li>
-  </ul>
-</section>
-
-<section id="about" aria-labelledby="t-ab">
-  <h2 id="t-ab">10. About</h2>
-  <p>This page is a synthetic reading prepared by <strong>Vijaylaxmi Yadav</strong>, a student of the Master’s programme in Digital Humanities and Social Sciences, for the course <strong>Digital Lab</strong>.</p>
-  <p>It summarises and assesses a single published article. All wording is the reader’s own. Page numbers in parentheses refer to Tharoor’s novel as quoted in the article.</p>
-</section>
-
-<footer>Vijaylaxmi Yadav · Digital Lab · Reading of Parmar (2020)</footer>
-</main>
+<section class="slide" data-title="4. List" id="list"><div class="w">
+<h2>4. List</h2>
+<div class="ctl tabs" role="group" aria-label="Choose a list">
+<button type="button" data-p="a" aria-pressed="true">Figures</button>
+<button type="button" data-p="b" aria-pressed="false">Gandhian novels</button>
+<button type="button" data-p="c" aria-pressed="false">Sources</button>
 </div>
+<div class="pn on" data-p="a">
+<p class="mut">Table 1. Mythic and historical figures named in the article. Tap a card to turn it.</p>
+<div class="ctl" id="lens" role="group" aria-label="Read the cards through the epic or through history"><span class="mut">Read as:</span>
+<button type="button" data-v="0" aria-pressed="true">Epic</button><button type="button" data-v="1" aria-pressed="false">History</button>
+<span class="mut">Show:</span>
+<button type="button" data-f="" aria-pressed="true">All</button><button type="button" data-f="y" aria-pressed="false">Treated closely</button><button type="button" data-f="p" aria-pressed="false">Partly</button><button type="button" data-f="n" aria-pressed="false">Not analysed</button></div>
+<div id="cards"></div>
+</div>
+<div class="pn" data-p="b">
+<p class="mut">Table 2. Gandhian Indian novels in English cited by the article</p>
+<div class="tw"><table>
+<thead><tr><th>Author</th><th>Gandhian element, per the article</th></tr></thead>
+<tbody>
+<tr><td>Kamala Markandaya</td><td>Concern for the lowly and the lost</td></tr>
+<tr><td>Nayantara Sahgal</td><td>Gandhian values throughout</td></tr>
+<tr><td>Manohar Malgonkar</td><td>Hindu–Muslim unity</td></tr>
+<tr><td>Chaman Nahal</td><td>Communal harmony; Gandhi’s life 1915–1922</td></tr>
+<tr><td>Mulk Raj Anand</td><td>Gandhi appears as a character</td></tr>
+<tr><td>R. K. Narayan</td><td>The freedom movement under Gandhi</td></tr>
+<tr><td>K. A. Abbas; K. S. Venkataramani</td><td>The first phase of the freedom movement</td></tr>
+</tbody></table></div>
+<p class="mut">Titles and author spellings are standardised from the article’s versions, which contain small typographical slips.</p>
+</div>
+<div class="pn" data-p="c">
+<h3>Critical and theoretical sources the article draws on</h3>
+<ul>
+<li>Irving Howe and Gordon Milne: definitions of the political novel.</li>
+<li>Stephen Spender: the writer cannot avoid the political nature of the age.</li>
+<li>T. S. Eliot: time present and time past (<em>Four Quartets</em>).</li>
+<li>Meenakshi Mukherjee: epics as shared background in Indian fiction.</li>
+<li>Chinua Achebe: the writer’s role in a new nation.</li>
+<li>M. F. Salat: history’s open-endedness and the retelling of the past.</li>
+</ul>
+</div>
+</div></section>
+
+<section class="slide" data-title="5. Analysis" id="analysis"><div class="w">
+<h2>5. Analysis</h2>
+<div class="ctl tabs" role="group" aria-label="Choose an analysis view">
+<button type="button" data-p="a" aria-pressed="true">Argumentative path</button>
+<button type="button" data-p="b" aria-pressed="false">Gandhi and Nehru</button>
+<button type="button" data-p="c" aria-pressed="false">Strengths and weaker points</button>
+</div>
+<div class="pn on" data-p="a"><ol>
+<li><strong>Writers cannot avoid politics.</strong> This produces the political novel, defined by dominant ideas or a political setting.</li>
+<li><strong>Indian political fiction grew from Gandhian nationalism</strong>, with a long list of novels shaped by Gandhi’s ideals.</li>
+<li><strong>Tharoor joins epic and history.</strong> Eliot’s time lets past and present coexist, and the result blurs genre, which the article calls a postmodern trait.</li>
+<li><strong>Gandhi.</strong> Praised for truth, non-violence, fasting and mass mobilisation; criticised for using Hindu symbols that alienated Jinnah and for loosening his hold on Congress at partition.</li>
+<li><strong>Nehru.</strong> Credited as a democrat without villainy, but criticised for Kashmir, for heavy industry and elite higher education over basic needs, and for foreign recognition over domestic need.</li>
+<li><strong>Conclusion.</strong> Merging myth and history recovers heritage and pride, in line with Achebe and Salat.</li>
+</ol></div>
+<div class="pn" data-p="b"><div class="two">
+<div><h3>Gandhi (Gangaji)</h3><p><strong>Praised for</strong></p><ul><li>Truth</li><li>Non-violence</li><li>Fasting</li><li>Mass mobilisation</li></ul><p><strong>Criticised for</strong></p><ul><li>Using Hindu symbols that alienated Jinnah</li><li>Loosening his hold on Congress at partition</li></ul></div>
+<div><h3>Nehru (Dhritarashtra)</h3><p><strong>Praised for</strong></p><ul><li>Being a democrat without villainy</li></ul><p><strong>Criticised for</strong></p><ul><li>Kashmir</li><li>Heavy industry and elite higher education over basic needs</li><li>Foreign recognition over domestic need</li></ul></div>
+</div></div>
+<div class="pn" data-p="c"><div class="two">
+<div><h3>Strengths</h3><ul>
+<li>Clear scaffold from genre definition, to national tradition, to a single novel.</li>
+<li>Quotations with page numbers (for example, Gangaji on truth, p. 48) ground the claims.</li>
+<li>The Bhishma–Gandhi parallel (both committed to truth, both unable to prevent bloodshed) is a sharp, well-evidenced observation.</li>
+<li>The article is balanced on Gandhi: it records both reverence and critique.</li></ul></div>
+<div><h3>Weaker points</h3><ul>
+<li>The first third surveys other Gandhian novels, but they are not used again when Tharoor is discussed, so the link to the main argument stays thin.</li>
+<li>The claim that the novel makes readers question the mythic past is asserted rather than shown through reader response or textual technique.</li>
+<li>Tharoor’s attitude is sometimes merged with the narrator’s and the characters’ (for example, Godse’s attack on Gandhi), and the difference is not discussed.</li></ul></div>
+</div></div>
+</div></section>
+
+<section class="slide" data-title="6. Discussion" id="discussion"><div class="w">
+<h2>6. Discussion</h2>
+<ul>
+<li>The central idea is that retelling the epic is a way of reading nationalist history. Putting Gandhi in the place of Bhishma gives him mythic stature and, at the same moment, a tragic flaw: the elder who holds power from behind the throne and cannot stop the coming war. Nehru as Dhritarashtra carries a related charge, that of a ruler whose blindness is a failure of vision.</li>
+<li>Myth is a shared language in Indian writing, so using it makes the political critique legible to a broad readership. It also connects to postcolonial recovery: for Achebe and Salat, rewriting the past is a form of self-respect rather than nostalgia.</li>
+<li>Satire is not neutral. The novel’s judgments on Nehru and Gandhi are Tharoor’s, and the article largely reports them rather than testing them against historians.</li>
+</ul>
+<div class="box"><strong>Check before you cite.</strong> The article says the novel ends with Indira Gandhi’s re-election in 1982. Her return to power after the Janata government is usually dated to 1980, so verify this against the novel before repeating it. The article also gives Milne’s book as 1966 in the text and 1972 in the works cited.</div>
+</div></section>
+
+<section class="slide" data-title="7. Limitation" id="limitation"><div class="w">
+<h2>7. Limitation</h2>
+<div class="two">
+<div><h3>Of the article</h3><ul>
+<li>It examines only Gandhi and Nehru, and the author says so. Vidur/Patel, Karna/Jinnah, Pandu/Bose and Priya Duryodhani/Indira Gandhi are named but not analysed.</li>
+<li>It has no stated methodology and little engagement with existing criticism of the novel beyond Salat.</li>
+<li>It leans on one primary text and on quotation, with little attention to narrative form, humour or irony, which are central to Tharoor’s style.</li>
+<li>Reference details are inconsistent (the Milne date, stray note numbers in the first paragraph).</li></ul></div>
+<div><h3>Of this reading</h3><ul>
+<li>It is based on one article, not on the novel itself, so claims about Tharoor’s text are second-hand.</li>
+<li>The research questions and methodology sections are inferred, since the article does not state them.</li></ul></div>
+</div>
+<div class="seg" role="img" aria-label="Two of seven character pairs treated closely"><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span></div>
+<p class="mut">Two of the seven figure pairs in Table 1 are analysed in depth.</p>
+</div></section>
+
+<section class="slide" data-title="8. Future work" id="future"><div class="w">
+<h2>8. Future work</h2>
+<ul class="g5">
+<li><strong>Complete the mapping.</strong> Extend the close reading to the remaining character pairs and to the Partition and Emergency sections.</li>
+<li><strong>Digital Lab methods.</strong> Build a character network from the novel’s text, compare how often epic names and historical names appear, or use topic modelling to find which political themes cluster with which epic episodes.</li>
+<li><strong>Digital annotation.</strong> Tag the quotations used by Parmar in a shared annotation tool and add a layer for the original <em>Mahabharata</em> episodes.</li>
+<li><strong>Comparison.</strong> Set Tharoor beside other myth-and-history retellings in Indian writing to test the claim of blurred genre.</li>
+<li><strong>Reception.</strong> Collect reviews and reader responses to see whether readers do question inherited myths, as the article claims.</li>
+</ul>
+</div></section>
+
+<section class="slide" data-title="9. References" id="references"><div class="w">
+<h2>9. References</h2>
+<p class="mut">The first entry is the article read here. The rest are the works it cites, as listed in its own bibliography, and should be checked against the originals before being cited again.</p>
+<ul class="cols">
+<li>Parmar, Atulkumar. 2020. “Intertwining Myth and Politics: Shashi Tharoor’s <em>The Great Indian Novel</em>.” <em>Sahityasetu</em> 10 (3), Continuous Issue 57, May–June. ISSN 2249-2372. <a href="http://www.sahityasetu.co.in/issue57/atul.html">sahityasetu.co.in/issue57/atul.html</a></li>
+<li>Achebe, Chinua. 1964. “The Role of the Writer in a New Nation.” <em>Nigerian Magazine</em> 81: 157–60.</li>
+<li>Eliot, T. S. <em>Four Quartets</em>.</li>
+<li>Howe, Irving. 1957. <em>Politics and the Novel</em>. New York: Horizon Press.</li>
+<li>Milne, Gordon. <em>The American Political Novel</em>. Norman: University of Oklahoma Press. (Dated 1972 in the article’s bibliography and 1966 in its text.)</li>
+<li>Mukherjee, Meenakshi. 1971. <em>The Twice Born Fiction</em>. New Delhi: Heinemann.</li>
+<li>Salat, M. F. 1993. “Making the Past Present: Shashi Tharoor’s <em>The Great Indian Novel</em>.” In <em>Contemporary Indian Fiction in English</em>, ed. Avadhesh K. Singh. New Delhi: Creative Books.</li>
+<li>Spender, Stephen. 1966. <em>World Within World: The Autobiography of Stephen Spender</em>. Los Angeles: University of California Press.</li>
+<li>Tharoor, Shashi. 1989. <em>The Great Indian Novel</em>. New Delhi: Penguin Books.</li>
+</ul>
+</div></section>
+
+<section class="slide" data-title="10. About" id="about"><div class="w">
+<h2>10. About</h2>
+<p class="big">This page is a synthetic reading prepared by <strong>Vijaylaxmi Yadav</strong>, a student of the Master’s programme in Digital Humanities and Social Sciences, for the course <strong>Digital Lab</strong>.</p>
+<p>It summarises and assesses a single published article. All wording is the reader’s own. Page numbers in parentheses refer to Tharoor’s novel as quoted in the article.</p>
+<p class="mut">Vijaylaxmi Yadav · Digital Lab · Reading of Parmar (2020)</p>
+</div></section>
+
+<div id="menu" role="menu" aria-label="Jump to slide"></div>
+<div id="ctrl">
+<button type="button" id="pv" aria-label="Previous slide">‹</button>
+<span id="ct"></span>
+<button type="button" id="nx" aria-label="Next slide">›</button>
+<button type="button" id="mn" aria-label="Slide list">Slides</button>
+<button type="button" id="fs" aria-label="Full screen">Full screen</button>
+<button type="button" id="th" aria-label="Switch between dusk and khadi themes">Dusk / Khadi</button>
+</div>
+
 <script>
-(function(){
-var R=document.documentElement,$=function(s,c){return(c||document).querySelector(s)},$$=function(s,c){return[].slice.call((c||document).querySelectorAll(s))};
-var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-/* theme */
-var tb=$('#theme');
-function setTheme(t){R.setAttribute('data-theme',t);tb.textContent=t==='epic'?'Switch to Archive view':'Switch to Epic view';tb.setAttribute('aria-pressed',t==='epic')}
-setTheme(matchMedia('(prefers-color-scheme:dark)').matches?'epic':'archive');
-tb.onclick=function(){setTheme(R.getAttribute('data-theme')==='epic'?'archive':'epic')};
-/* chakra + progress */
-var ck=document.createElement('div');ck.className='chakra';ck.setAttribute('aria-hidden','true');
-var s='<svg viewBox="-50 -50 100 100" fill="none" stroke="currentColor" stroke-width=".7"><circle r="48"/><circle r="9"/>';
-for(var i=0;i<24;i++)s+='<line x1="9" x2="48" transform="rotate('+i*15+')"/>';
-ck.innerHTML=s+'</svg>';document.body.appendChild(ck);
-var rp=document.createElement('div');rp.className='rp';document.body.appendChild(rp);
-var tick=false;
-function onScroll(){if(tick)return;tick=true;requestAnimationFrame(function(){tick=false;
-var m=document.body.scrollHeight-innerHeight,p=m>0?Math.min(1,scrollY/m):0;
-R.style.setProperty('--sy',(10+p*80)+'%');
-if(!reduce)R.style.setProperty('--rot',(p*540)+'deg');
-rp.style.transform='scaleX('+p+')'})}
-addEventListener('scroll',onScroll,{passive:true});onScroll();
-/* nav highlight */
-var links=$$('nav a');
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-35% 0px -60% 0px'});
-$$('main > section').forEach(function(x){io.observe(x)});
-/* flip cards from Table 1 */
-var t=$('#list table'),w=t.parentNode;w.classList.add('t1');
-var d=document.createElement('div');d.className='deck';
-$$('tbody tr',t).forEach(function(tr){var c=tr.children;
-d.insertAdjacentHTML('beforeend','<button class="fc" aria-pressed="false"><span class="f"><b>'+c[0].innerHTML+'</b><small>From the Mahabharata: '+c[1].innerHTML+'</small><small>Select to flip</small></span><span class="b"><b>'+c[2].innerHTML+'</b><small>Treated closely in the article? '+c[3].innerHTML+'</small></span></button>')});
-var intro=document.createElement('p');intro.className='note';
-intro.innerHTML='Table 1. Mythic and historical figures named in the article. Select a card to flip from the epic figure to the historical person. <button class="btn flipall" type="button">Flip all</button>';
-w.parentNode.insertBefore(intro,w);w.parentNode.insertBefore(d,w);
-document.addEventListener('click',function(e){
-var f=e.target.closest('.fc');
-if(f){f.setAttribute('aria-pressed',f.getAttribute('aria-pressed')!=='true');return}
-var b=e.target.closest('.flipall');
-if(b){var cs=$$('.fc',b.parentNode.nextElementSibling),on=cs.some(function(c){return c.getAttribute('aria-pressed')!=='true'});
-cs.forEach(function(c){c.setAttribute('aria-pressed',on)})}});
-/* presentation mode */
-var st=document.createElement('div');st.id='stage';st.setAttribute('role','dialog');st.setAttribute('aria-modal','true');st.setAttribute('aria-label','Presentation');
-st.innerHTML='<div class="pbar"><i></i></div><div class="slide" tabindex="-1"></div><div class="ctl"><button class="btn" data-a="-1">Back</button><span class="cnt"></span><button class="btn pri" data-a="1">Next</button><button class="btn" data-a="x">Exit</button><span class="hint">Arrow keys or space to step, F for full screen, Esc to exit</span></div>';
-document.body.appendChild(st);
-var parts=[$('header')].concat($$('main > section')),idx=0,frags=[],fi=0,opener,sl=$('.slide',st);
-function clean(h){return h.replace(/ id="[^"]*"/g,'').replace(/ aria-labelledby="[^"]*"/g,'')}
-function show(i,full){idx=i;sl.innerHTML='<div>'+clean(parts[i].outerHTML)+'</div>';
-frags=$$('li,.abstract,.check',sl).filter(function(x){return!x.closest('.refs')});
-frags.forEach(function(x){x.classList.add('frag');if(full)x.classList.add('on')});fi=full?frags.length:0;
-sl.scrollTop=0;$('.pbar i',st).style.width=((i+1)/parts.length*100)+'%';
-$('.cnt',st).textContent=(i+1)+' / '+parts.length;
-if(!reduce&&sl.animate)sl.animate([{opacity:0},{opacity:1}],{duration:300})}
-function step(n){
-if(n>0){if(fi<frags.length){var f=frags[fi++];f.classList.add('on');f.scrollIntoView({block:'nearest',behavior:reduce?'auto':'smooth'})}else if(idx<parts.length-1)show(idx+1)}
-else{if(fi>0){frags[--fi].classList.remove('on')}else if(idx>0)show(idx-1,true)}}
-function open(){opener=document.activeElement;st.classList.add('open');document.body.style.overflow='hidden';show(0);sl.focus()}
-function close(){if(document.fullscreenElement)document.exitFullscreen();st.classList.remove('open');document.body.style.overflow='';if(opener&&opener.focus)opener.focus()}
-$('#present').onclick=open;
-st.addEventListener('click',function(e){var b=e.target.closest('[data-a]');if(!b)return;var a=b.getAttribute('data-a');if(a==='x')close();else step(+a)});
-document.addEventListener('keydown',function(e){
-if(!st.classList.contains('open')){if((e.key==='p'||e.key==='P')&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName))open();return}
-var k=e.key;
-if(k==='Escape'){close()}
-else if(k==='ArrowRight'||k==='PageDown'||(k===' '&&!e.target.closest('.fc,button'))){e.preventDefault();step(1)}
-else if(k==='ArrowLeft'||k==='PageUp'){e.preventDefault();step(-1)}
-else if(k==='Home'){show(0)}
-else if(k==='End'){show(parts.length-1,true)}
-else if(k==='f'||k==='F'){if(document.fullscreenElement)document.exitFullscreen();else if(st.requestFullscreen)st.requestFullscreen()}});
-var x0=null;st.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
-st.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>60)step(dx<0?1:-1)});
-})();
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const root=document.documentElement,S=$$('.slide'),ch=$('#chakra');
+if(matchMedia('(prefers-color-scheme: light)').matches)root.dataset.theme='khadi';
+const theme=()=>root.dataset.theme=root.dataset.theme==='khadi'?'dusk':'khadi';
+const full=()=>document.fullscreenElement?document.exitFullscreen():root.requestFullscreen&&root.requestFullscreen();
+$('#th').onclick=theme;$('#fs').onclick=full;
+
+// 24-spoke wheel that turns a little with each slide
+let w='<svg viewBox="-100 -100 200 200"><circle r="96"/><circle r="88"/><circle r="12"/>';
+for(let i=0;i<24;i++)w+=`<line y1="-12" y2="-88" transform="rotate(${i*15})"/>`;
+ch.innerHTML=w+'</svg>';
+
+// slide navigation
+let i=0;
+const menu=$('#menu');
+menu.innerHTML=S.map((s,k)=>`<button type="button" data-k="${k}">${s.dataset.title}</button>`).join('');
+function go(n){
+  i=Math.max(0,Math.min(S.length-1,n));
+  S.forEach((s,k)=>{s.classList.toggle('on',k===i);s.inert=k!==i;});
+  $('#bar').style.width=(i/(S.length-1)*100)+'%';
+  $('#ct').textContent=`${i+1} / ${S.length}`;
+  ch.style.transform=`rotate(${i*30}deg)`;
+  $$('#menu button').forEach((b,k)=>b.setAttribute('aria-current',k===i));
+  menu.classList.remove('on');
+  history.replaceState(null,'','#'+(i+1));
+  S[i].scrollTop=0;
+}
+$('#pv').onclick=()=>go(i-1);$('#nx').onclick=()=>go(i+1);
+$('#mn').onclick=()=>menu.classList.toggle('on');
+menu.onclick=e=>{if(e.target.dataset.k)go(+e.target.dataset.k)};
+addEventListener('keydown',e=>{
+  const k=e.key;
+  if(k==='ArrowRight'||k==='PageDown'||(k===' '&&e.target.tagName!=='BUTTON')){e.preventDefault();go(i+1)}
+  else if(k==='ArrowLeft'||k==='PageUp'){e.preventDefault();go(i-1)}
+  else if(k==='Home')go(0);else if(k==='End')go(S.length-1);
+  else if(k==='f'||k==='F')full();else if(k==='t'||k==='T')theme();
+  else if(k==='Escape')menu.classList.remove('on');
+});
+let x0=null;
+addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(d)>60)go(i+(d<0?1:-1));},{passive:true});
+
+// tabs inside a slide
+$$('.tabs').forEach(t=>t.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  const s=b.closest('.slide');
+  t.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  s.querySelectorAll(':scope .pn').forEach(p=>p.classList.toggle('on',p.dataset.p===b.dataset.p));
+}));
+
+// Table 1 as flip cards
+const R=[['Gangaji','Bhishma (Ganga Datta)','Mahatma Gandhi','Yes'],['Dhritarashtra','Blind king of Hastinapur','Jawaharlal Nehru','Yes'],['Pandu','Dhritarashtra’s brother','Subhas Chandra Bose','Only as Gangaji’s sidelined favourite'],['Vidur','Counsellor','Sardar Patel','No'],['Karna','Epic warrior','Muhammad Ali Jinnah','No'],['Shikhandin','Bhishma’s eventual slayer','Nathuram Godse','As Gandhi’s assassin'],['Priya Duryodhani','Duryodhana','Indira Gandhi','Only in the novel’s time span']];
+$('#cards').innerHTML=R.map(([a,b,c,d])=>{
+  const k=d==='Yes'?'y':d==='No'?'n':'p',t=k==='y'?'Treated closely':k==='n'?'Not analysed in the article':d;
+  return `<button type="button" class="card ${k}" aria-label="${a}, ${b}. Turn card."><span class="in"><span class="f"><b>${a}</b><i>${b}</i></span><span class="k"><b>${c}</b><i>${t}</i></span></span></button>`;
+}).join('');
+const cards=$$('.card');
+cards.forEach(c=>c.onclick=()=>c.classList.toggle('flip'));
+$$('#lens button').forEach(b=>b.onclick=()=>{
+  const v=b.dataset.v!==undefined;
+  $$('#lens button').forEach(x=>{if((x.dataset.v!==undefined)===v)x.setAttribute('aria-pressed',x===b)});
+  if(v)cards.forEach(c=>c.classList.toggle('flip',b.dataset.v==='1'));
+  else cards.forEach(c=>c.hidden=b.dataset.f&&!c.classList.contains(b.dataset.f));
+});
+
+go(Math.max(0,(parseInt(location.hash.slice(1))||1)-1));
 </script>
 </body>
 </html>
